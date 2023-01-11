@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -65,6 +66,8 @@ namespace CarBuy.DAL.Entities
         public int CarDriveid { get; set; }
         public VolumeEngineCar VolumeEngineCar { get; set; } // Объём двигателя
         public int VolumeEngineCarid { get; set; }
+        public IdentityUser User { get; set; } //User
+        public string UserId { get; set; }
 
         // Системные поля для админов и прочее
         [Required]
