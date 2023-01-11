@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace CarBuy.DAL.Entities
 {
-    public class BodyCar //Таблица "Кузов автомобиля"
+    public class GearShiftBox //Таблица "Коробка переключения передач"
     {
         [Required]
         public int id { get; set; }
-        [Required (ErrorMessage ="Введите кузов автомобиля")]
-        public string NameBodyCar { get; set; }    
-
+        [Required(ErrorMessage = "Введите наименование коробки переключения передач")]
+        public string NameGearShiftBox { get; set; }
     }
 }
