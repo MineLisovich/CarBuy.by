@@ -7,17 +7,31 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CarBuy.DAL.Entities;
 using System.Threading;
+using CarBuy.DAL.DataContext;
+
 
 namespace CarBuy.DAL.EF
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>// DbContext//
     {
-       
 
-        public AppDbContext(DbContextOptions<AppDbContext> connectionString) : base(connectionString) { }
-       
+        public class OptionsBuild
+        {
+            public OptionsBuild()
+            {
+                _appConfiguration = new AppConfiguration();
+                opsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+                opsBuilder.UseSqlServer(_appConfiguration.sqlConnectionString);
+                dbOptins = opsBuilder.Options;
+            }
+            public DbContextOptionsBuilder<AppDbContext> opsBuilder { get; set; }
+            public DbContextOptions<AppDbContext> dbOptins { get; set; }
+            private AppConfiguration _appConfiguration { get; set; }
+        }
+        public static OptionsBuild ops = new OptionsBuild();
 
-
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+   
         public DbSet<AdsCar> AdsCar { get; set; }
         public DbSet<BodyCar> BodyCar { get; set; }
         public DbSet<BrandCar> BrandCar { get; set; }
@@ -27,6 +41,7 @@ namespace CarBuy.DAL.EF
         public DbSet<GenerationModelCar> GenerationModelCar { get; set; }
         public DbSet<ModelBrandCar> ModelBrandCar { get; set; }
         public DbSet<VolumeEngineCar> VolumeEngineCar { get; set; }
+        public DbContextOptions<AppDbContext> ConnectionString { get; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
