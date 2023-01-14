@@ -1,0 +1,641 @@
+
+/*_____HEADER STYLE_________________________________________________________*/
+
+/*First_path_menu*/
+.First_path_menu{
+ width: 100%;
+ height: auto;
+ display:flex;
+}
+.logo_area {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+}
+    .logo_area h1 {
+        text-decoration: none;
+        font-size: 40px;
+        color: #428bca;
+        font-weight: 700;
+    }
+.logo_area p{
+    color: rgb(0, 0, 0);
+}
+.logo_area a{
+    text-decoration: none;
+    color: #428bca;
+}
+.logo_area :hover{
+    text-decoration: none;
+   border-radius: 4px;
+   transition: all 1s ease;
+   color: #428bca;
+}
+.search_header_area{
+    width: 400px;
+    height: auto;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    border-radius: 4px;
+
+}
+.search_header_area input{
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(228, 228, 228);
+}
+.BTN_First_path_menu{
+    width: 100px;
+    display: block;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border-radius: 4px;
+  
+}
+.BTN_First_path_menu p { font-size: 17px;}
+.BTN_First_path_menu a {color: black; text-decoration: none;}
+.BTN_First_path_menu :hover {
+    transition: all 1s ease; 
+    color: #428bca;
+    text-decoration: none;
+    
+}
+.BTN_img  {
+    width: 25px;
+    height: 25px;
+}
+.BTN_First_path_menu_login{
+    display: block;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 17px;
+    color: black;
+  
+  
+}
+.BTN_First_path_menu_login a {color: black; text-decoration: none;}
+.BTN_First_path_menu_login :hover {
+    transition: all 1s ease; 
+    color: #428bca;   
+    text-decoration: none;
+}
+
+/*Second_path_menu*/
+.Second_path_menu_area {
+    width: 100%;
+    background-color:  #428bca;
+
+}
+.Second_path_menu{
+    width: 100%;
+    height: 30px;
+    display:flex;
+    margin-top: 5px;
+    font-size: 17px;
+    color: white;
+    background-color:  #428bca;
+}
+.BTN_Second_path_menu
+{
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.BTN_Second_path_menu :hover{  
+    transition: all 1s ease; 
+    color: #428bca;
+    background-color: white;
+    text-decoration: none; 
+    border-radius: 4px; 
+}
+.BTN_Second_path_menu a {color: white; text-decoration: none;}
+
+  /*_____foother STYLE _________________________________________________________*/
+  footer{
+    width: 100%;
+    height: auto;
+    background-color: #428bca;
+    text-align: center;
+  }
+  footer h1{
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 15px;
+  }
+
+
+/*______________________________________________________________*/
+/*______________________________________________________________*/
+/*_____1-BODY STYLE INDEX_________________________________________________________*/
+.body_area_style
+{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+.brands_car_list {
+    width: 100%;
+    height: auto;
+    display: block;
+   
+  
+}
+.brands_car_logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.brands_car_logo a{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.Brands_logo_img{
+  width: 100px;
+  height: 80px;  
+}
+.brands_car_logo :hover{
+    transition: all 1s ease;
+    width: 110px;
+    height: 90px; 
+}
+.list_brands_area{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+
+   
+}
+.list_brands{
+    width: 100%;
+    height: 240px;
+}
+.list_brands h1 {
+    width: 100%;
+    font-weight: 700;
+    background-color: #428bca;
+    color: white;
+}
+.list_brands a {
+    color: black;
+    text-decoration: none;
+}
+.list_brands p {font-size: 17px;}
+.list_brands a:hover{
+    transition: all 1s ease;
+    
+    text-decoration: none;
+}
+.recommend_car {
+    width: 100%;
+    height: auto;
+   
+}
+.header_block_cars {
+    width: 100%;
+    font-weight: 700;
+    background-color: #428bca;
+    color: white;
+}
+.cars_rec {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #428bca;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
+    margin-bottom: 20px;
+ 
+}
+.photoCars{
+  width: 250px;
+  height: 100%;
+}
+.swiper{
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide{
+    display: flex;
+  }
+  .swiper-slide img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .info_car{
+    width: 80%;
+    height: 100%;
+    display: block;
+  }
+  .header_info_car, .main_info_car_1{
+    width: 80%;
+    margin-left: 10px;
+    display: flex;
+    margin-top: 5px;
+  }
+  .header_info_car h1{
+    margin-top: 0px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .header_info_car a{
+    color: black;
+    text-decoration: none;
+  }
+  .header_info_car h1  :hover{
+    transition: all 1s ease;
+    
+    text-decoration: none;
+  }
+  .header_info_car p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .main_info_car_1 p{
+    margin-right: 50px;
+    font-size: 18px;
+    
+  }
+  .area_control_buttons_ads{
+    text-align: right;
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+    margin-right: 5px;
+  }
+  .control_btn_img{width: 20px; height: 20px;}
+  .contrlol_button_ads :hover {
+    width: 25px; height: 25px;
+     transition: all 1s ease;
+  
+  }
+/*______________________________________________________________*/
+/*______________________________________________________________*/
+/*_____2-BODY STYLE LOGIN_________________________________________________________*/
+.login_form_area{
+  width: 450px;
+  height: 490px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 15.5%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 43px 19px rgba(66, 139, 202, 0.18);
+}
+.header_login_form {
+ width: 100%;
+ height: auto;
+ text-align: center;
+ margin-top: 5px;
+
+}
+.login_form {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: block;
+}
+.login_form_items, .login_form_items_btn{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.login_form_items input{
+  width: 70%;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(228, 228, 228);
+}
+.login_form_items_btn button
+{
+  width: auto;
+  height: 50px;
+  border:none;
+  border-radius: 4px;
+  background-color: #428bca;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.login_form_items_btn  :hover{
+  transition: all 1s ease;
+  background-color: black;
+  box-shadow: 0px 0px 43px 19px rgba(66, 139, 202, 0.18);
+}
+.social_login{
+  width: 100%;
+  text-align: center;
+}
+.social_img{ 
+  width: 35px;
+  height: 35px;
+}
+.link_img_area :hover{
+  transition: all 1s ease;
+  width: 50px;
+  height: 50px;
+}
+.other_links{
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.other_links a{
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+.other_links :hover{
+  transition: all 1s ease;
+  color: #428bca;
+  text-decoration: none;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*STYLE PAGE CATALOG*/
+.header_page_catalog {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #428bca;
+  font-weight: 700;
+}
+.filter_area{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-bottom: 60px;
+  display: block;
+  box-shadow: 0px 0px 43px 19px rgba(66, 139, 202, 0.18);
+}
+.first_line_filter{
+  width: 100%;
+  display: flex;
+ 
+}
+.first_line_filter select{
+  margin-top: 20px;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(228, 228, 228);
+  font-size: 18px;
+}
+.second_line_filter{
+  
+  width: 100%;
+  display: flex;
+ 
+}
+.second_line_filter select{
+  margin-top: 20px;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(228, 228, 228);
+  font-size: 18px;
+}
+.second_line_filter input{
+  margin-top: 20px;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: auto;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(228, 228, 228);
+  font-size: 18px;
+}
+.filter_area button{
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 170px;
+  height: 50px;
+  font-size: 19px;
+  color: white;
+  border: none;
+  background-color: #428bca;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.sort_btn :hover{
+  transition: all 1s ease;
+  background-color: black;
+  box-shadow: 0px 0px 43px 19px rgba(66, 139, 202, 0.18);
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*STYLE SINGLE PAGE ADS*/
+/* HEADER ADS*/
+.headerSinglePageAdsArea
+{
+  width: 100%;
+  height: auto;
+  display: block;
+
+ 
+}
+.headerSPAds{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.headerSPAds h1{
+  margin-left: 30px;
+  font-weight: 700;
+}
+.price
+{
+  margin-left: auto;
+  margin-top: auto;
+}
+.otherHederInfo{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.otherHederInfo p {
+  margin-left: 30px;
+  font-size: 17px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.548);
+}
+.panelControlAds
+{
+  width: 7%;
+  height: 40px;
+  margin-left: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display:flex ;
+}
+.favouritesSPAds{
+  
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.favouritesSPAds a{
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+.favouritesSPAds :hover{
+  transition: all 1s ease;
+  width: 30px;
+  height: 30px;
+}
+.userInfoAds{
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 0px 0px 43px 19px rgba(66, 139, 202, 0.18);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  
+}
+.UserAvarar{
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+}
+.feedbackUserAds{
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  height: 70px;
+  border-radius: 4px;
+  
+}
+.MessageUserAds {
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left:1px solid black ;
+  border-right:1px solid black ;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+.MessageUserAds a{
+  color: black;
+  text-decoration: none;
+}
+.MessageUserAds :hover{
+  transition: all 1s ease;
+  color: #428bca;
+  text-decoration: none;
+}
+.showPhoneUserAds{
+  font-size: 25px;  
+  margin-left: 5px;
+  padding-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.showPhoneUserAds a{
+  color: black;
+  text-decoration: none;
+}
+.showPhoneUserAds :hover{
+  transition: all 1s ease;
+  color: #428bca;
+  text-decoration: none;
+}
+/* HEADER ADS END*/
+/* BASE ADS BODY*/
+.baseBodyAdsArea{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 30px;
+}
+/* MAIN INFO AND PHOTO CAR*/
+.MainInfoCarAdsAndPhotoCarAdsArea{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.MaibInfoCarAds{
+  width: 30%;
+  display: block;
+}
+.tablInfoCar tr{
+ font-size: 17px;
+}
+.headtable {color: rgba(0, 0, 0, 0.486);}
+.PhotoCarAds{
+  width: 70%;
+  height: auto;
+}
+/* OTHER INFO CAR*/
+.sellersComment{
+  display: block;
+}
+.sellersComment p{
+  font-size: 17px;
+}
+.sellersComment h1{
+  font-weight: 700;
+}
+.equipment{
+  display: block;
+}
+.equipment p{
+  font-size: 17px;
+}
+.equipment h1{
+  font-weight: 700;
+}
+

@@ -20,12 +20,12 @@ namespace CarBuy.DAL.Repositories
         }
         public IEnumerable<AdsCar> GetAll()
         {
-            return db.AdsCar;
+            return db.AdsCar.Include(br=>br.BrandCar).Include(bo=>bo.BodyCar).Include(g=>g.GearShiftBox).Include(e=>e.EngineCar).Include(c=>c.CarDrive).Include(v=>v.VolumeEngineCar).Include(u=>u.User);
         }
 
         public AdsCar GetId(int id)
         {
-            return db.AdsCar.Find(id);
+            return db.AdsCar.Include(br => br.BrandCar).Include(bo => bo.BodyCar).Include(g => g.GearShiftBox).Include(e => e.EngineCar).Include(c => c.CarDrive).Include(v => v.VolumeEngineCar).Include(u => u.User).FirstOrDefault(a=>a.id == id);
         }
 
        public void SaveItem (AdsCar entity)

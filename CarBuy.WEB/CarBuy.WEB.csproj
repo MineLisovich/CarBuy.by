@@ -20,4 +20,17 @@
     <ProjectReference Include="..\CarBuy.BLL\CarBuy.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Moder\Controllers\" />
+    <Folder Include="Areas\Moder\Views\Home\" />
+    <Folder Include="Areas\Moder\Views\Shared\" />
+    <Folder Include="Areas\User\Controllers\" />
+    <Folder Include="Areas\User\Views\Home\" />
+    <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+
 </Project>

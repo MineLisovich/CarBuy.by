@@ -20,12 +20,12 @@ namespace CarBuy.DAL.Repositories
         }
         public IEnumerable<FavouritesAds> GetAll()
         {
-            return db.FavouritesAds;
+            return db.FavouritesAds.Include(a=>a.AdsCar).Include(u=>u.User);
         }
 
         public FavouritesAds GetId(int id)
         {
-            return db.FavouritesAds.Find(id);
+            return db.FavouritesAds.Include(a => a.AdsCar).Include(u => u.User).FirstOrDefault(f => f.id == id);
         }
 
         public void SaveItem(FavouritesAds entity)

@@ -1,8 +1,375 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿ <!-- HEADER AREA -->
+<header>
+    <div class="container">
+        <div class="First_path_menu">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            <div class="logo_area">
+                <h1><a href="#">Car<p>Buy</p></a></h1>
+            </div>
+            <div class="search_header_area">
+                <input type="text" placeholder="Поик по объявлениям" />
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/catalog2.png">
+                    <p>Каталог</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/favourites.png">
+                    <p>Избранное</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/about_img.png">
+                    <p>О нас</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/help_img.png">
+                    <p>Помощь</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/feedback_img.png">
+                    <p>Отзывы</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu"></div>
+            <div class="BTN_First_path_menu_login">
+                <a href="#">
+                    <img class="BTN_img" src="~/img/login_img.png">
+                    <p>Войти</p>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="Second_path_menu_area">
+        <div class="container">
+            <div class="Second_path_menu">
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Седан</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Внедорожник</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Хэтчбек</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Лифтбек</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Универсал</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Минивэн</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Купе</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Пикап</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Кабриолет</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Фургон</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+<!-- END HEADER AREA -->
+<!-- BODY AREA -->
+<div class="container">
+    <div class="body_area_style">
+        <div class="brands_car_list">
+            <div class="brands_car_logo">
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/audi_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/bmw_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/ford_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/honda_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo//lada_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/mercedes_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/nissan_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/toyota_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/volkswagen_logo.png"></a>
+                <a href="#"> <img class="Brands_logo_img" src="~/img/bandsCarLogo/volvo_logo.png"></a>
+            </div>
+            <div class="list_brands_area">
+                <!-- Данные подсасываться будут из бд -->
+                <div class="list_brands">
+                    <h1>Марки авто</h1>
+                    <div class="col-md-2">
+                        <a href="#"><p>Лада (2000)</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="header_block_cars">Рекомендуем</h1>
+        <div class="recommend_car">
+
+            <!--Карточка объявления-->
+            <div class="cars_rec">
+                <div class="photoCars">
+                    <div class="swiper mySwiper" title="Покрутите колёсико мыши">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_1.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs_2.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_3.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_4.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_5.jpg"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="info_car">
+                    <div class="header_info_car">
+                        <h1><a href="#">Audi RS 7 II (4K)</a></h1>
+                        <p>от 600 000 BYN</p>
+                        <p>2021</p>
+                        <p>20 000 км</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>4.0 л / 600 л.с. / Бензин</p>
+                        <p>Полный</p>
+                        <p>Цена с НДС</p>
+                        <p>Ауди цент Минск</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>Лифтбек</p>
+                        <p>Автомат</p>
+                        <p>Серебристый</p>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить в избранное">
+                            <a href="#"><img class="control_btn_img" src="img/favourites.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить заметку">
+                            <a href="#"><img class="control_btn_img" src="img/note_ads.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Скрыть объявление">
+                            <a href="#"><img class="control_btn_img" src="img/hide_ads.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--КОнец Карточки объявления-->
+            <!--Карточка объявления-->
+            <div class="cars_rec">
+                <div class="photoCars">
+                    <div class="swiper mySwiper" title="Покрутите колёсико мыши">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_1.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs_2.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_3.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_4.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_5.jpg"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="info_car">
+                    <div class="header_info_car">
+                        <h1><a href="#">Audi RS 7 II (4K)</a></h1>
+                        <p>от 600 000 BYN</p>
+                        <p>2021</p>
+                        <p>20 000 км</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>4.0 л / 600 л.с. / Бензин</p>
+                        <p>Полный</p>
+                        <p>Цена с НДС</p>
+                        <p>Ауди цент Минск</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>Лифтбек</p>
+                        <p>Автомат</p>
+                        <p>Серебристый</p>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить в избранное">
+                            <a href="#"><img class="control_btn_img" src="img/favourites.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить заметку">
+                            <a href="#"><img class="control_btn_img" src="img/note_ads.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Скрыть объявление">
+                            <a href="#"><img class="control_btn_img" src="img/hide_ads.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--КОнец Карточки объявления-->
+            <!--Карточка объявления-->
+            <div class="cars_rec">
+                <div class="photoCars">
+                    <div class="swiper mySwiper" title="Покрутите колёсико мыши">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_1.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs_2.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_3.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_4.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_5.jpg"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="info_car">
+                    <div class="header_info_car">
+                        <h1><a href="#">Audi RS 7 II (4K)</a></h1>
+                        <p>от 600 000 BYN</p>
+                        <p>2021</p>
+                        <p>20 000 км</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>4.0 л / 600 л.с. / Бензин</p>
+                        <p>Полный</p>
+                        <p>Цена с НДС</p>
+                        <p>Ауди цент Минск</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>Лифтбек</p>
+                        <p>Автомат</p>
+                        <p>Серебристый</p>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить в избранное">
+                            <a href="#"><img class="control_btn_img" src="img/favourites.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить заметку">
+                            <a href="#"><img class="control_btn_img" src="img/note_ads.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Скрыть объявление">
+                            <a href="#"><img class="control_btn_img" src="img/hide_ads.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--КОнец Карточки объявления-->
+            <!--Карточка объявления-->
+            <div class="cars_rec">
+                <div class="photoCars">
+                    <div class="swiper mySwiper" title="Покрутите колёсико мыши">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_1.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs_2.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_3.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_4.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_5.jpg"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="info_car">
+                    <div class="header_info_car">
+                        <h1><a href="#">Audi RS 7 II (4K)</a></h1>
+                        <p>от 600 000 BYN</p>
+                        <p>2021</p>
+                        <p>20 000 км</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>4.0 л / 600 л.с. / Бензин</p>
+                        <p>Полный</p>
+                        <p>Цена с НДС</p>
+                        <p>Ауди цент Минск</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>Лифтбек</p>
+                        <p>Автомат</p>
+                        <p>Серебристый</p>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить в избранное">
+                            <a href="#"><img class="control_btn_img" src="img/favourites.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить заметку">
+                            <a href="#"><img class="control_btn_img" src="img/note_ads.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Скрыть объявление">
+                            <a href="#"><img class="control_btn_img" src="img/hide_ads.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--КОнец Карточки объявления-->
+            <!--Карточка объявления-->
+            <div class="cars_rec">
+                <div class="photoCars">
+                    <div class="swiper mySwiper" title="Покрутите колёсико мыши">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_1.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs_2.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_3.jpeg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_4.jpg"></div>
+                            <div class="swiper-slide"><img src="~/img/CarsPhoto/rs7_5.jpg"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="info_car">
+                    <div class="header_info_car">
+                        <h1><a href="#">Audi RS 7 II (4K)</a></h1>
+                        <p>от 600 000 BYN</p>
+                        <p>2021</p>
+                        <p>20 000 км</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>4.0 л / 600 л.с. / Бензин</p>
+                        <p>Полный</p>
+                        <p>Цена с НДС</p>
+                        <p>Ауди цент Минск</p>
+                    </div>
+                    <div class="main_info_car_1">
+                        <p>Лифтбек</p>
+                        <p>Автомат</p>
+                        <p>Серебристый</p>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить в избранное">
+                            <a href="#"><img class="control_btn_img" src="img/favourites.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Добавить заметку">
+                            <a href="#"><img class="control_btn_img" src="img/note_ads.png"></a>
+                        </div>
+                    </div>
+                    <div class="area_control_buttons_ads">
+                        <div class="contrlol_button_ads" title="Скрыть объявление">
+                            <a href="#"><img class="control_btn_img" src="img/hide_ads.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--КОнец Карточки объявления-->
+        </div>
+    </div>
 </div>
+<!-- END BODY AREA -->

@@ -20,12 +20,12 @@ namespace CarBuy.DAL.Repositories
         }
         public IEnumerable<GenerationModelCar> GetAll()
         {
-            return db.GenerationModelCar;
+            return db.GenerationModelCar.Include(m=>m.ModelBrandCar).ThenInclude(b=>b.BrandCar);
         }
 
         public GenerationModelCar GetId(int id)
         {
-            return db.GenerationModelCar.Find(id);
+            return db.GenerationModelCar.Include(m => m.ModelBrandCar).ThenInclude(b => b.BrandCar).FirstOrDefault(g => g.id == id);
         }
 
         public void SaveItem(GenerationModelCar entity)
