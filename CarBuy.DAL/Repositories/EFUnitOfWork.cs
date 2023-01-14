@@ -1,11 +1,14 @@
-﻿using CarBuy.DAL.EF;
+﻿using CarBuy.DAL.DataContext;
+using CarBuy.DAL.EF;
 using CarBuy.DAL.Entities;
 using CarBuy.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Reflection.PortableExecutable;
 using System.Text;
 
 namespace CarBuy.DAL.Repositories
@@ -23,11 +26,31 @@ namespace CarBuy.DAL.Repositories
         private GenerationModelCarRepository generationModelCarRepository;
         private ModelBrandCarRepository modelBrandCarRepository;
         private VolumeEngineCarRepository volumeEngineCarRepository;
+        private FavouritesAdsRepository favouritesAdsRepository;
 
-        public EFUnitOfWork(AppDbContext context)
+        //public EFUnitOfWork(AppDbContext context)
+        //{
+        //    this.db = context;
+        //}
+        public class OptionsBuild
         {
-            this.db = context;
+            public OptionsBuild()
+            {
+                _appConfiguration = new AppConfiguration();
+                opsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+                opsBuilder.UseSqlServer(_appConfiguration.sqlConnectionString);
+                dbOptins = opsBuilder.Options;
+            }
+            public DbContextOptionsBuilder<AppDbContext> opsBuilder { get; set; }
+            public DbContextOptions<AppDbContext> dbOptins { get; set; }
+            private AppConfiguration _appConfiguration { get; set; }
         }
+        public static OptionsBuild ops = new OptionsBuild();
+        public EFUnitOfWork(DbContextOptions<AppDbContext> options)
+        {
+            db = new AppDbContext(options);
+        }
+
 
         public IRepository<AdsCar> AdsCar
         {
@@ -112,7 +135,15 @@ namespace CarBuy.DAL.Repositories
                 return volumeEngineCarRepository;
             }
         }
-
+        public IRepository<FavouritesAds> FavouritesAds
+        {
+            get
+            {
+                if (favouritesAdsRepository == null)
+                    favouritesAdsRepository = new FavouritesAdsRepository(db);
+                return favouritesAdsRepository;
+            }
+        }
 
 
 

@@ -10,25 +10,25 @@ using System.Text;
 
 namespace CarBuy.DAL.Repositories
 {
-    public class GenerationModelCarRepository : IRepository<GenerationModelCar>
+    public class FavouritesAdsRepository : IRepository<FavouritesAds>
     {
         private AppDbContext db;
 
-        public GenerationModelCarRepository(AppDbContext context)
+        public FavouritesAdsRepository(AppDbContext context)
         {
             this.db = context;
         }
-        public IEnumerable<GenerationModelCar> GetAll()
+        public IEnumerable<FavouritesAds> GetAll()
         {
-            return db.GenerationModelCar;
+            return db.FavouritesAds;
         }
 
-        public GenerationModelCar GetId(int id)
+        public FavouritesAds GetId(int id)
         {
-            return db.GenerationModelCar.Find(id);
+            return db.FavouritesAds.Find(id);
         }
 
-        public void SaveItem(GenerationModelCar entity)
+        public void SaveItem(FavouritesAds entity)
         {
             if (entity.id == default)
             {
@@ -43,7 +43,7 @@ namespace CarBuy.DAL.Repositories
 
         public void Delete(int id)
         {
-            db.GenerationModelCar.Remove(new GenerationModelCar() { id = id });
+            db.FavouritesAds.Remove(new FavouritesAds() { id = id });
             db.SaveChanges();
         }
     }

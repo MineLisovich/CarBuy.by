@@ -24,31 +24,27 @@ namespace CarBuy.DAL.Repositories
             return db.BodyCar;
         }
 
-        public BodyCar Get(int id)
+        public BodyCar GetId(int id)
         {
             return db.BodyCar.Find(id);
         }
-
-        public void Create(BodyCar bodyCar)
+        public void SaveItem(BodyCar entity)
         {
-            db.BodyCar.Add(bodyCar);
-        }
-
-        public void Update(BodyCar bodyCar)
-        {
-            db.Entry(bodyCar).State = EntityState.Modified;
-        }
-
-        public IEnumerable<BodyCar> Find(Func<BodyCar, Boolean> predicate)
-        {
-            return db.BodyCar.Where(predicate).ToList();
+            if (entity.id == default)
+            {
+                db.Entry(entity).State = EntityState.Added;
+            }
+            else
+            {
+                db.Entry(entity).State = EntityState.Modified;
+            }
+            db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            BodyCar bodyCar = db.BodyCar.Find(id);
-            if (bodyCar != null)
-                db.BodyCar.Remove(bodyCar);
+            db.BodyCar.Remove(new BodyCar() { id = id });
+            db.SaveChanges();
         }
     }
 }

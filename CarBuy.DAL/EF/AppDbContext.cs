@@ -41,6 +41,7 @@ namespace CarBuy.DAL.EF
         public DbSet<GenerationModelCar> GenerationModelCar { get; set; }
         public DbSet<ModelBrandCar> ModelBrandCar { get; set; }
         public DbSet<VolumeEngineCar> VolumeEngineCar { get; set; }
+        public DbSet<FavouritesAds> FavouritesAds { get; set; }
         public DbContextOptions<AppDbContext> ConnectionString { get; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -328,6 +329,12 @@ namespace CarBuy.DAL.EF
                 AddDateAds = DateTime.Now,
                 VisibleAds = true,
                 PassedModeration = true
+            });
+            //
+            modelBuilder.Entity<FavouritesAds>().HasData(new FavouritesAds { 
+            id = 1,
+            AdsCarid = 1,   
+            UserId ="702"
             });
         }
     }

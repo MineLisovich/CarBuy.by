@@ -23,31 +23,28 @@ namespace CarBuy.DAL.Repositories
             return db.AdsCar;
         }
 
-        public AdsCar Get(int id)
+        public AdsCar GetId(int id)
         {
             return db.AdsCar.Find(id);
         }
 
-        public void Create(AdsCar adsCar)
+       public void SaveItem (AdsCar entity)
         {
-            db.AdsCar.Add(adsCar);
-        }
-
-        public void Update(AdsCar adsCar)
-        {
-            db.Entry(adsCar).State = EntityState.Modified;
-        }
-
-        public IEnumerable<AdsCar> Find(Func<AdsCar, Boolean> predicate)
-        {
-            return db.AdsCar.Where(predicate).ToList();
+            if (entity.id == default)
+            {
+                db.Entry(entity).State = EntityState.Added;
+            }
+            else
+            {
+                db.Entry(entity).State = EntityState.Modified;
+            }
+            db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            AdsCar adsCar = db.AdsCar.Find(id);
-            if (adsCar != null)
-                db.AdsCar.Remove(adsCar);
+            db.AdsCar.Remove(new AdsCar() { id = id });
+            db.SaveChanges();
         }
     }
 }

@@ -156,7 +156,7 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             id = 1,
-                            AddDateAds = new DateTime(2023, 1, 12, 17, 28, 42, 182, DateTimeKind.Local).AddTicks(1123),
+                            AddDateAds = new DateTime(2023, 1, 14, 14, 28, 9, 308, DateTimeKind.Local).AddTicks(1542),
                             BodyCarid = 1,
                             BrandCarid = 1,
                             CarDriveid = 1,
@@ -348,6 +348,36 @@ namespace CarBuy.DAL.Migrations
                         {
                             id = 4,
                             NameEngine = "Электро"
+                        });
+                });
+
+            modelBuilder.Entity("CarBuy.DAL.Entities.FavouritesAds", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AdsCarid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("AdsCarid");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("FavouritesAds");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            AdsCarid = 1,
+                            UserId = "702"
                         });
                 });
 
@@ -554,14 +584,14 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             Id = "601",
-                            ConcurrencyStamp = "a9bac188-6715-4796-bfc5-94ce859538ae",
+                            ConcurrencyStamp = "5644e871-0ca6-450c-acf1-fd668919494f",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "602",
-                            ConcurrencyStamp = "9b0157e9-3533-45ff-a4db-f3d12058fdf8",
+                            ConcurrencyStamp = "d6fcb759-006d-466c-9c30-a5e0b6d6a420",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -660,13 +690,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "701",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e050f70a-9005-4bf5-ac6e-b68fd83a1497",
+                            ConcurrencyStamp = "3fce294d-08e5-43a7-8fa6-ea3a428a9015",
                             Email = "deeLimpay@mail.ru",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "deeLimpay@mail.ru",
                             NormalizedUserName = "deeLimpay",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEzJQGnO7Zfda7jWU3bK8OnjmZ1G0mNpkO2N/mm1nLCeV1n7B/vyTLdetXWloMl5CA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJe4NqRYEd0084e9ykUlp9NJ/rmJsHx/chD9hcsTJ3fTnCm4I9ZQ7hDjD5KOYPSe8w==",
                             PhoneNumber = "+375433332323",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -677,13 +707,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "702",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "dc806c3e-ede9-4e0e-9389-cafda6c7c1e4",
+                            ConcurrencyStamp = "3161ed32-200b-4092-a49a-7a653e19047e",
                             Email = "stepa@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "stepa@gmail.com",
                             NormalizedUserName = "Stepashka",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA+jiZI06EmUyWSIuNx3XXFHll8u0b2X99GASLQQ34L8lV7jXz1N7JAqLD/e+bU8cA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEM6OzsftAOuJmtZZUccVy2RFQBQ/ZTx/D0NFNcvPZVuJ/wY41c3I1EsXslOIwumXg==",
                             PhoneNumber = "+375231884433",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -825,6 +855,19 @@ namespace CarBuy.DAL.Migrations
                         .HasForeignKey("VolumeEngineCarid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CarBuy.DAL.Entities.FavouritesAds", b =>
+                {
+                    b.HasOne("CarBuy.DAL.Entities.AdsCar", "AdsCar")
+                        .WithMany()
+                        .HasForeignKey("AdsCarid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("CarBuy.DAL.Entities.GenerationModelCar", b =>

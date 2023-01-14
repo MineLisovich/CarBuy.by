@@ -17,6 +17,7 @@ namespace CarBuy.DAL.Interfaces
         IRepository<GenerationModelCar> GenerationModelCar { get; }
         IRepository<ModelBrandCar> ModelBrandCar { get; }
         IRepository<VolumeEngineCar> VolumeEngineCar { get; }
+        IRepository<FavouritesAds> FavouritesAds { get; }
 
         void Save();
     }

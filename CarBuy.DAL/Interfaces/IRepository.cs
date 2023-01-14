@@ -7,10 +7,8 @@ namespace CarBuy.DAL.Interfaces
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
-        T Get(int id);
-        IEnumerable<T> Find(Func<T, Boolean> predicate);
-        void Create(T item);
-        void Update(T item);
+        T GetId(int id);
+        void SaveItem(T entity);
         void Delete(int id);
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarBuy.DAL.Migrations
 {
-    public partial class Mig1 : Migration
+    public partial class _mig2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -354,13 +354,39 @@ namespace CarBuy.DAL.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "FavouritesAds",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AdsCarid = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FavouritesAds", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_FavouritesAds_AdsCar_AdsCarid",
+                        column: x => x.AdsCarid,
+                        principalTable: "AdsCar",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FavouritesAds_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "602", "9b0157e9-3533-45ff-a4db-f3d12058fdf8", "user", "USER" },
-                    { "601", "a9bac188-6715-4796-bfc5-94ce859538ae", "admin", "ADMIN" }
+                    { "602", "d6fcb759-006d-466c-9c30-a5e0b6d6a420", "user", "USER" },
+                    { "601", "5644e871-0ca6-450c-acf1-fd668919494f", "admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -368,8 +394,8 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "702", 0, "dc806c3e-ede9-4e0e-9389-cafda6c7c1e4", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAEA+jiZI06EmUyWSIuNx3XXFHll8u0b2X99GASLQQ34L8lV7jXz1N7JAqLD/e+bU8cA==", "+375231884433", false, "", false, "Stepashka" },
-                    { "701", 0, "e050f70a-9005-4bf5-ac6e-b68fd83a1497", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAEEzJQGnO7Zfda7jWU3bK8OnjmZ1G0mNpkO2N/mm1nLCeV1n7B/vyTLdetXWloMl5CA==", "+375433332323", false, "", false, "deeLimpay" }
+                    { "702", 0, "3161ed32-200b-4092-a49a-7a653e19047e", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAEEM6OzsftAOuJmtZZUccVy2RFQBQ/ZTx/D0NFNcvPZVuJ/wY41c3I1EsXslOIwumXg==", "+375231884433", false, "", false, "Stepashka" },
+                    { "701", 0, "3fce294d-08e5-43a7-8fa6-ea3a428a9015", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAEJe4NqRYEd0084e9ykUlp9NJ/rmJsHx/chD9hcsTJ3fTnCm4I9ZQ7hDjD5KOYPSe8w==", "+375433332323", false, "", false, "deeLimpay" }
                 });
 
             migrationBuilder.InsertData(
@@ -448,7 +474,7 @@ namespace CarBuy.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "AdsCar",
                 columns: new[] { "id", "AddDateAds", "BodyCarid", "BrandCarid", "CarDriveid", "Color", "Condition", "Customs", "EngineCarid", "ExteriorElements", "GearShiftBoxid", "Horsepower", "Mileage", "Multimedia", "Ownership", "PassedModeration", "PassportCar", "PastOwners", "PhotoCar_1", "PhotoCar_2", "PhotoCar_3", "PhotoCar_4", "PhotoCar_5", "Price", "Rudder", "Safety", "SellersComment", "UserId", "VIN", "VisibleAds", "VolumeEngineCarid" },
-                values: new object[] { 1, new DateTime(2023, 1, 12, 17, 28, 42, 182, DateTimeKind.Local).AddTicks(1123), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2222", 2332, "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
+                values: new object[] { 1, new DateTime(2023, 1, 14, 14, 28, 9, 308, DateTimeKind.Local).AddTicks(1542), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2222", 2332, "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -463,6 +489,11 @@ namespace CarBuy.DAL.Migrations
                 table: "ModelBrandCar",
                 columns: new[] { "id", "BrandCarid", "NameModelBrand" },
                 values: new object[] { 1, 1, "rs7" });
+
+            migrationBuilder.InsertData(
+                table: "FavouritesAds",
+                columns: new[] { "id", "AdsCarid", "UserId" },
+                values: new object[] { 1, 1, "702" });
 
             migrationBuilder.InsertData(
                 table: "GenerationModelCar",
@@ -544,6 +575,16 @@ namespace CarBuy.DAL.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_FavouritesAds_AdsCarid",
+                table: "FavouritesAds",
+                column: "AdsCarid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavouritesAds_UserId",
+                table: "FavouritesAds",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_GenerationModelCar_ModelBrandCarid",
                 table: "GenerationModelCar",
                 column: "ModelBrandCarid");
@@ -556,9 +597,6 @@ namespace CarBuy.DAL.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "AdsCar");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -575,7 +613,19 @@ namespace CarBuy.DAL.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "FavouritesAds");
+
+            migrationBuilder.DropTable(
                 name: "GenerationModelCar");
+
+            migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "AdsCar");
+
+            migrationBuilder.DropTable(
+                name: "ModelBrandCar");
 
             migrationBuilder.DropTable(
                 name: "BodyCar");
@@ -590,16 +640,10 @@ namespace CarBuy.DAL.Migrations
                 name: "GearShiftBox");
 
             migrationBuilder.DropTable(
-                name: "VolumeEngineCar");
-
-            migrationBuilder.DropTable(
-                name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "ModelBrandCar");
+                name: "VolumeEngineCar");
 
             migrationBuilder.DropTable(
                 name: "BrandCar");

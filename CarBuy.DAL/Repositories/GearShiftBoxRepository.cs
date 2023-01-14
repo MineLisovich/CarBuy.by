@@ -23,31 +23,28 @@ namespace CarBuy.DAL.Repositories
             return db.GearShiftBox;
         }
 
-        public GearShiftBox Get(int id)
+        public GearShiftBox GetId(int id)
         {
             return db.GearShiftBox.Find(id);
         }
 
-        public void Create(GearShiftBox gearShiftBox)
+        public void SaveItem(GearShiftBox entity)
         {
-            db.GearShiftBox.Add(gearShiftBox);
-        }
-
-        public void Update(GearShiftBox gearShiftBox)
-        {
-            db.Entry(gearShiftBox).State = EntityState.Modified;
-        }
-
-        public IEnumerable<GearShiftBox> Find(Func<GearShiftBox, Boolean> predicate)
-        {
-            return db.GearShiftBox.Where(predicate).ToList();
+            if (entity.id == default)
+            {
+                db.Entry(entity).State = EntityState.Added;
+            }
+            else
+            {
+                db.Entry(entity).State = EntityState.Modified;
+            }
+            db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            GearShiftBox gearShiftBox = db.GearShiftBox.Find(id);
-            if (gearShiftBox != null)
-                db.GearShiftBox.Remove(gearShiftBox);
+            db.GearShiftBox.Remove(new GearShiftBox() { id = id });
+            db.SaveChanges();
         }
     }
 }

@@ -23,31 +23,28 @@ namespace CarBuy.DAL.Repositories
             return db.VolumeEngineCar;
         }
 
-        public VolumeEngineCar Get(int id)
+        public VolumeEngineCar GetId(int id)
         {
             return db.VolumeEngineCar.Find(id);
         }
 
-        public void Create(VolumeEngineCar volumeEngineCar)
+        public void SaveItem(VolumeEngineCar entity)
         {
-            db.VolumeEngineCar.Add(volumeEngineCar);
-        }
-
-        public void Update(VolumeEngineCar volumeEngineCar)
-        {
-            db.Entry(volumeEngineCar).State = EntityState.Modified;
-        }
-
-        public IEnumerable<VolumeEngineCar> Find(Func<VolumeEngineCar, Boolean> predicate)
-        {
-            return db.VolumeEngineCar.Where(predicate).ToList();
+            if (entity.id == default)
+            {
+                db.Entry(entity).State = EntityState.Added;
+            }
+            else
+            {
+                db.Entry(entity).State = EntityState.Modified;
+            }
+            db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            VolumeEngineCar volumeEngineCar = db.VolumeEngineCar.Find(id);
-            if (volumeEngineCar != null)
-                db.VolumeEngineCar.Remove(volumeEngineCar);
+            db.VolumeEngineCar.Remove(new VolumeEngineCar() { id = id });
+            db.SaveChanges();
         }
     }
 }
