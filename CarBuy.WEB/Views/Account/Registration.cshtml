@@ -1,0 +1,130 @@
+﻿ <!-- HEADER AREA -->
+ @model CarBuy.WEB.Models.RegistrationViewModel
+<header>
+    <div class="container">
+        <div class="First_path_menu">
+
+            <div class="logo_area">
+                <h1><a href="#">Car<p>Buy</p></a></h1>
+            </div>
+            <div class="search_header_area">
+                <input type="text" placeholder="Поик по объявлениям" />
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="img/catalog2.png">
+                    <p>Каталог</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="img/favourites.png">
+                    <p>Избранное</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="img/about_img.png">
+                    <p>О нас</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="img/help_img.png">
+                    <p>Помощь</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu">
+                <a href="#">
+                    <img class="BTN_img" src="img/feedback_img.png">
+                    <p>Отзывы</p>
+                </a>
+            </div>
+            <div class="BTN_First_path_menu"></div>
+            <div class="BTN_First_path_menu_login">
+                <a href="#">
+                    <img class="BTN_img" src="img/login_img.png">
+                    <p>Войти</p>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="Second_path_menu_area">
+        <div class="container">
+            <div class="Second_path_menu">
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Седан</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Внедорожник</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Хэтчбек</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Лифтбек</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Универсал</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Минивэн</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Купе</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Пикап</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Кабриолет</a>
+                </div>
+                <div class="BTN_Second_path_menu">
+                    <a href="#">Фургон</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+<!-- END HEADER AREA -->
+<!-- BODY AREA -->
+<div class="container">
+    <div class="login_form_area">
+        <div class="header_login_form">
+            <h1>Регистрация</h1>
+        </div>
+        <form class="login_form" method="post" asp-controller="Account" asp-action="Registration">
+            <div class="login_form_items">
+                <input asp-for="UserName" type="text" placeholder="Введите логин" />
+                <span asp-validation-for="UserName" class="spanErr"></span>
+            </div>
+            <div class="login_form_items">
+                <input asp-for="Email" type="email" placeholder="Введите Email" />
+                <span asp-validation-for="Email" class="spanErr"></span>
+            </div>
+            <div class="login_form_items">
+                <input asp-for="PhoneNumber" type="tel" placeholder="Введите номер телефона" />
+                <span asp-validation-for="PhoneNumber" class="spanErr"></span>
+            </div>
+            <div class="login_form_items">
+                <input asp-for="PasswordHash" type="password" placeholder="Введите пароль" />
+                <span asp-validation-for="PasswordHash" class="spanErr"></span>
+            </div>
+            <div class="login_form_items_btn">
+                <button type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+
+        <div class="other_links">
+            <div>
+                <a asp-area ="" asp-controller="Account" asp-action="Login">Есть аккаунт ?</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END BODY AREA -->

@@ -8,4 +8,11 @@
     <ProjectReference Include="..\CarBuy.DAL\CarBuy.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Moder\" />
+    <Folder Include="Areas\MainArea\" />
+    <Folder Include="Areas\User\" />
+  </ItemGroup>
+
 </Project>

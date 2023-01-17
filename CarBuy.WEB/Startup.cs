@@ -28,6 +28,8 @@ namespace CarBuy.WEB
         public void ConfigureServices(IServiceCollection services)
         {
             Configuration.Bind("Project", new Config());
+
+            services.AddTransient<EmailService>();
             services.AddControllersWithViews();
 
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
@@ -98,9 +100,11 @@ namespace CarBuy.WEB
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("Admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("User", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("Moder", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+          
             });
         }
     }

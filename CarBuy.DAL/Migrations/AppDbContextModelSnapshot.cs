@@ -156,7 +156,7 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             id = 1,
-                            AddDateAds = new DateTime(2023, 1, 14, 14, 28, 9, 308, DateTimeKind.Local).AddTicks(1542),
+                            AddDateAds = new DateTime(2023, 1, 17, 13, 53, 27, 948, DateTimeKind.Local).AddTicks(5666),
                             BodyCarid = 1,
                             BrandCarid = 1,
                             CarDriveid = 1,
@@ -584,16 +584,23 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             Id = "601",
-                            ConcurrencyStamp = "5644e871-0ca6-450c-acf1-fd668919494f",
+                            ConcurrencyStamp = "a9fd5cfe-2fa5-4c65-ba46-26104ef8a4ca",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "602",
-                            ConcurrencyStamp = "d6fcb759-006d-466c-9c30-a5e0b6d6a420",
+                            ConcurrencyStamp = "b67439fa-660f-4b1c-aeb7-4cf04f4cbc4c",
                             Name = "user",
                             NormalizedName = "USER"
+                        },
+                        new
+                        {
+                            Id = "603",
+                            ConcurrencyStamp = "478977ea-ffed-45d4-bb71-d043d02a2608",
+                            Name = "moder",
+                            NormalizedName = "MODER"
                         });
                 });
 
@@ -690,13 +697,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "701",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3fce294d-08e5-43a7-8fa6-ea3a428a9015",
+                            ConcurrencyStamp = "2faeaf38-3158-4b89-a88a-b163e1f6d1b2",
                             Email = "deeLimpay@mail.ru",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "deeLimpay@mail.ru",
                             NormalizedUserName = "deeLimpay",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJe4NqRYEd0084e9ykUlp9NJ/rmJsHx/chD9hcsTJ3fTnCm4I9ZQ7hDjD5KOYPSe8w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENiv3KN8CfHfs9roJvpwkM1xF/akb5ydiaU+f9qyiUDVeHqGengNv8jd1RFj1qVxLg==",
                             PhoneNumber = "+375433332323",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -707,18 +714,35 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "702",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3161ed32-200b-4092-a49a-7a653e19047e",
+                            ConcurrencyStamp = "70985885-0a48-46a6-bff5-836dc6e91ea4",
                             Email = "stepa@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "stepa@gmail.com",
                             NormalizedUserName = "Stepashka",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEM6OzsftAOuJmtZZUccVy2RFQBQ/ZTx/D0NFNcvPZVuJ/wY41c3I1EsXslOIwumXg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECou3YiZS8HwU2621REfCUsDJy14+MNZYm4zttzBAYEZiqXLNp7AX6gw4bLjWox+aw==",
                             PhoneNumber = "+375231884433",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
                             UserName = "Stepashka"
+                        },
+                        new
+                        {
+                            Id = "703",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "a0a7855d-884f-49ab-8ab8-410966364eed",
+                            Email = "mod@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "mod@gmail.com",
+                            NormalizedUserName = "Moder",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE+RTv9C/imFWITFC8s5sa8hohkBlhL3iRkCiqyUVtUznPAPd8b4qHfvZoxhAeFMsw==",
+                            PhoneNumber = "+375231880433",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "",
+                            TwoFactorEnabled = false,
+                            UserName = "Moder"
                         });
                 });
 
@@ -792,6 +816,11 @@ namespace CarBuy.DAL.Migrations
                         {
                             UserId = "702",
                             RoleId = "602"
+                        },
+                        new
+                        {
+                            UserId = "703",
+                            RoleId = "603"
                         });
                 });
 

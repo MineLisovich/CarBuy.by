@@ -253,6 +253,13 @@ namespace CarBuy.DAL.EF
                 NormalizedName = "USER",
 
             });
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Id = "603",
+                Name = "moder",
+                NormalizedName = "MODER",
+
+            });
             modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
             {
                 Id = "701",
@@ -282,6 +289,21 @@ namespace CarBuy.DAL.EF
 
             });
 
+            modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
+            {
+                Id = "703",
+                UserName = "Moder",
+                NormalizedUserName = "Moder",
+                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "moder11"),
+                SecurityStamp = string.Empty,
+                Email = "mod@gmail.com",
+                NormalizedEmail = "mod@gmail.com",
+                EmailConfirmed = true,
+                PhoneNumber = "+375231880433"
+
+
+            });
+
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {
                 UserId = "701",
@@ -293,6 +315,12 @@ namespace CarBuy.DAL.EF
             {
                 UserId = "702",
                 RoleId = "602"
+
+            });
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                UserId = "703",
+                RoleId = "603"
 
             });
             //Заполение таблицы AdsCar

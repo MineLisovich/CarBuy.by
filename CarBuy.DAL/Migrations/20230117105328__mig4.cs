@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarBuy.DAL.Migrations
 {
-    public partial class _mig2 : Migration
+    public partial class _mig4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -385,8 +385,9 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "602", "d6fcb759-006d-466c-9c30-a5e0b6d6a420", "user", "USER" },
-                    { "601", "5644e871-0ca6-450c-acf1-fd668919494f", "admin", "ADMIN" }
+                    { "603", "478977ea-ffed-45d4-bb71-d043d02a2608", "moder", "MODER" },
+                    { "602", "b67439fa-660f-4b1c-aeb7-4cf04f4cbc4c", "user", "USER" },
+                    { "601", "a9fd5cfe-2fa5-4c65-ba46-26104ef8a4ca", "admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -394,8 +395,9 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "702", 0, "3161ed32-200b-4092-a49a-7a653e19047e", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAEEM6OzsftAOuJmtZZUccVy2RFQBQ/ZTx/D0NFNcvPZVuJ/wY41c3I1EsXslOIwumXg==", "+375231884433", false, "", false, "Stepashka" },
-                    { "701", 0, "3fce294d-08e5-43a7-8fa6-ea3a428a9015", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAEJe4NqRYEd0084e9ykUlp9NJ/rmJsHx/chD9hcsTJ3fTnCm4I9ZQ7hDjD5KOYPSe8w==", "+375433332323", false, "", false, "deeLimpay" }
+                    { "703", 0, "a0a7855d-884f-49ab-8ab8-410966364eed", "mod@gmail.com", true, false, null, "mod@gmail.com", "Moder", "AQAAAAEAACcQAAAAEE+RTv9C/imFWITFC8s5sa8hohkBlhL3iRkCiqyUVtUznPAPd8b4qHfvZoxhAeFMsw==", "+375231880433", false, "", false, "Moder" },
+                    { "701", 0, "2faeaf38-3158-4b89-a88a-b163e1f6d1b2", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAENiv3KN8CfHfs9roJvpwkM1xF/akb5ydiaU+f9qyiUDVeHqGengNv8jd1RFj1qVxLg==", "+375433332323", false, "", false, "deeLimpay" },
+                    { "702", 0, "70985885-0a48-46a6-bff5-836dc6e91ea4", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAECou3YiZS8HwU2621REfCUsDJy14+MNZYm4zttzBAYEZiqXLNp7AX6gw4bLjWox+aw==", "+375231884433", false, "", false, "Stepashka" }
                 });
 
             migrationBuilder.InsertData(
@@ -405,14 +407,14 @@ namespace CarBuy.DAL.Migrations
                 {
                     { 10, "Фургон" },
                     { 9, "Кабриолет" },
-                    { 8, "Пикап" },
                     { 1, "Седан" },
-                    { 6, "Минивэн" },
-                    { 5, "Универсал" },
-                    { 4, "Лифтбек" },
+                    { 7, "Купе" },
                     { 2, "Внедорожник" },
+                    { 6, "Минивэн" },
                     { 3, "Хэтчбек" },
-                    { 7, "Купе" }
+                    { 4, "Лифтбек" },
+                    { 5, "Универсал" },
+                    { 8, "Пикап" }
                 });
 
             migrationBuilder.InsertData(
@@ -446,10 +448,10 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "id", "NameGearShiftBox" },
                 values: new object[,]
                 {
-                    { 1, "Автоматическая" },
-                    { 3, "Робот" },
                     { 2, "Механическая" },
-                    { 4, "Вариатор" }
+                    { 4, "Вариатор" },
+                    { 3, "Робот" },
+                    { 1, "Автоматическая" }
                 });
 
             migrationBuilder.InsertData(
@@ -457,8 +459,6 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "id", "VolumeEngine" },
                 values: new object[,]
                 {
-                    { 2, 0.2f },
-                    { 3, 0.3f },
                     { 4, 0.4f },
                     { 5, 0.5f },
                     { 6, 0.6f },
@@ -468,13 +468,15 @@ namespace CarBuy.DAL.Migrations
                     { 10, 1f },
                     { 11, 1.1f },
                     { 12, 1.2f },
-                    { 1, 0.2f }
+                    { 1, 0.2f },
+                    { 2, 0.2f },
+                    { 3, 0.3f }
                 });
 
             migrationBuilder.InsertData(
                 table: "AdsCar",
                 columns: new[] { "id", "AddDateAds", "BodyCarid", "BrandCarid", "CarDriveid", "Color", "Condition", "Customs", "EngineCarid", "ExteriorElements", "GearShiftBoxid", "Horsepower", "Mileage", "Multimedia", "Ownership", "PassedModeration", "PassportCar", "PastOwners", "PhotoCar_1", "PhotoCar_2", "PhotoCar_3", "PhotoCar_4", "PhotoCar_5", "Price", "Rudder", "Safety", "SellersComment", "UserId", "VIN", "VisibleAds", "VolumeEngineCarid" },
-                values: new object[] { 1, new DateTime(2023, 1, 14, 14, 28, 9, 308, DateTimeKind.Local).AddTicks(1542), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2222", 2332, "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
+                values: new object[] { 1, new DateTime(2023, 1, 17, 13, 53, 27, 948, DateTimeKind.Local).AddTicks(5666), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2222", 2332, "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -482,7 +484,8 @@ namespace CarBuy.DAL.Migrations
                 values: new object[,]
                 {
                     { "701", "601" },
-                    { "702", "602" }
+                    { "702", "602" },
+                    { "703", "603" }
                 });
 
             migrationBuilder.InsertData(
