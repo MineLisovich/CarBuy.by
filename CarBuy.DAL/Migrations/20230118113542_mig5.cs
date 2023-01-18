@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CarBuy.DAL.Migrations
 {
-    public partial class _mig4 : Migration
+    public partial class mig5 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -271,6 +271,8 @@ namespace CarBuy.DAL.Migrations
                     Condition = table.Column<string>(nullable: false),
                     Customs = table.Column<string>(nullable: false),
                     Ownership = table.Column<string>(nullable: false),
+                    ModelCarAds = table.Column<string>(nullable: false),
+                    GenerationModelAds = table.Column<string>(nullable: false),
                     PhotoCar_1 = table.Column<string>(nullable: false),
                     PhotoCar_2 = table.Column<string>(nullable: false),
                     PhotoCar_3 = table.Column<string>(nullable: false),
@@ -385,9 +387,9 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "603", "478977ea-ffed-45d4-bb71-d043d02a2608", "moder", "MODER" },
-                    { "602", "b67439fa-660f-4b1c-aeb7-4cf04f4cbc4c", "user", "USER" },
-                    { "601", "a9fd5cfe-2fa5-4c65-ba46-26104ef8a4ca", "admin", "ADMIN" }
+                    { "603", "b0155ea0-580b-4f4d-b472-0f9583a00dd9", "moder", "MODER" },
+                    { "602", "3bf64832-0472-4b90-9382-4c056c5cd041", "user", "USER" },
+                    { "601", "e63d45c9-eb0e-46f5-8283-77107d5a80e3", "admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -395,9 +397,9 @@ namespace CarBuy.DAL.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "703", 0, "a0a7855d-884f-49ab-8ab8-410966364eed", "mod@gmail.com", true, false, null, "mod@gmail.com", "Moder", "AQAAAAEAACcQAAAAEE+RTv9C/imFWITFC8s5sa8hohkBlhL3iRkCiqyUVtUznPAPd8b4qHfvZoxhAeFMsw==", "+375231880433", false, "", false, "Moder" },
-                    { "701", 0, "2faeaf38-3158-4b89-a88a-b163e1f6d1b2", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAENiv3KN8CfHfs9roJvpwkM1xF/akb5ydiaU+f9qyiUDVeHqGengNv8jd1RFj1qVxLg==", "+375433332323", false, "", false, "deeLimpay" },
-                    { "702", 0, "70985885-0a48-46a6-bff5-836dc6e91ea4", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAECou3YiZS8HwU2621REfCUsDJy14+MNZYm4zttzBAYEZiqXLNp7AX6gw4bLjWox+aw==", "+375231884433", false, "", false, "Stepashka" }
+                    { "703", 0, "ea3f669e-de33-4af8-9ad7-ea2973d89d77", "mod@gmail.com", true, false, null, "mod@gmail.com", "Moder", "AQAAAAEAACcQAAAAEBwqrp80oYu8OUCdrMc7IP9FHoYQMsb4oSWYMNqX9iMQQdWghXHxST94YY2F2U3eYA==", "+375231880433", false, "", false, "Moder" },
+                    { "701", 0, "29f8b7d6-1792-424b-ba82-1709635f88a0", "deeLimpay@mail.ru", true, false, null, "deeLimpay@mail.ru", "deeLimpay", "AQAAAAEAACcQAAAAEA1Fjapb+rQFuJDQZIzhnjdYJU0h1EzFDmaVUMArs0mYtuAPlxPilLwMz3athe7aNw==", "+375433332323", false, "", false, "deeLimpay" },
+                    { "702", 0, "ffd54552-8b98-405a-9fcd-1327e5deeeaf", "stepa@gmail.com", true, false, null, "stepa@gmail.com", "Stepashka", "AQAAAAEAACcQAAAAENWjuGM8EGjro3otyv679ILOvELFTPKRwcfA3XWZDDC39svhIHe3Pr6iHhzeDYFfKQ==", "+375231884433", false, "", false, "Stepashka" }
                 });
 
             migrationBuilder.InsertData(
@@ -475,8 +477,8 @@ namespace CarBuy.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "AdsCar",
-                columns: new[] { "id", "AddDateAds", "BodyCarid", "BrandCarid", "CarDriveid", "Color", "Condition", "Customs", "EngineCarid", "ExteriorElements", "GearShiftBoxid", "Horsepower", "Mileage", "Multimedia", "Ownership", "PassedModeration", "PassportCar", "PastOwners", "PhotoCar_1", "PhotoCar_2", "PhotoCar_3", "PhotoCar_4", "PhotoCar_5", "Price", "Rudder", "Safety", "SellersComment", "UserId", "VIN", "VisibleAds", "VolumeEngineCarid" },
-                values: new object[] { 1, new DateTime(2023, 1, 17, 13, 53, 27, 948, DateTimeKind.Local).AddTicks(5666), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2222", 2332, "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
+                columns: new[] { "id", "AddDateAds", "BodyCarid", "BrandCarid", "CarDriveid", "Color", "Condition", "Customs", "EngineCarid", "ExteriorElements", "GearShiftBoxid", "GenerationModelAds", "Horsepower", "Mileage", "ModelCarAds", "Multimedia", "Ownership", "PassedModeration", "PassportCar", "PastOwners", "PhotoCar_1", "PhotoCar_2", "PhotoCar_3", "PhotoCar_4", "PhotoCar_5", "Price", "Rudder", "Safety", "SellersComment", "UserId", "VIN", "VisibleAds", "VolumeEngineCarid" },
+                values: new object[] { 1, new DateTime(2023, 1, 18, 14, 35, 42, 102, DateTimeKind.Local).AddTicks(9615), 1, 1, 1, "Blue", "Не требует ремонта", "Растаможен", 1, "Чёткие диски и салон", 1, "2023", "2222", 2332, "rs7", "Мультимедия классная", "6 месяцев", true, "Orig", "1 Владелец", "1.png", "2.png", "3.png", "4.png", "5.png", 3999333f, "Левый руль", "Безопасность ВО!", "Машина классная", "702", "FJFEBHRBFJBRJH2348", true, 1 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

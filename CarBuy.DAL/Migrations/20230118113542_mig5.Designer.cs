@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarBuy.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230117105328__mig4")]
-    partial class _mig4
+    [Migration("20230118113542_mig5")]
+    partial class mig5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,12 +62,20 @@ namespace CarBuy.DAL.Migrations
                     b.Property<int>("GearShiftBoxid")
                         .HasColumnType("int");
 
+                    b.Property<string>("GenerationModelAds")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Horsepower")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Mileage")
                         .HasColumnType("int");
+
+                    b.Property<string>("ModelCarAds")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Multimedia")
                         .IsRequired()
@@ -158,7 +166,7 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             id = 1,
-                            AddDateAds = new DateTime(2023, 1, 17, 13, 53, 27, 948, DateTimeKind.Local).AddTicks(5666),
+                            AddDateAds = new DateTime(2023, 1, 18, 14, 35, 42, 102, DateTimeKind.Local).AddTicks(9615),
                             BodyCarid = 1,
                             BrandCarid = 1,
                             CarDriveid = 1,
@@ -168,8 +176,10 @@ namespace CarBuy.DAL.Migrations
                             EngineCarid = 1,
                             ExteriorElements = "Чёткие диски и салон",
                             GearShiftBoxid = 1,
+                            GenerationModelAds = "2023",
                             Horsepower = "2222",
                             Mileage = 2332,
+                            ModelCarAds = "rs7",
                             Multimedia = "Мультимедия классная",
                             Ownership = "6 месяцев",
                             PassedModeration = true,
@@ -586,21 +596,21 @@ namespace CarBuy.DAL.Migrations
                         new
                         {
                             Id = "601",
-                            ConcurrencyStamp = "a9fd5cfe-2fa5-4c65-ba46-26104ef8a4ca",
+                            ConcurrencyStamp = "e63d45c9-eb0e-46f5-8283-77107d5a80e3",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "602",
-                            ConcurrencyStamp = "b67439fa-660f-4b1c-aeb7-4cf04f4cbc4c",
+                            ConcurrencyStamp = "3bf64832-0472-4b90-9382-4c056c5cd041",
                             Name = "user",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = "603",
-                            ConcurrencyStamp = "478977ea-ffed-45d4-bb71-d043d02a2608",
+                            ConcurrencyStamp = "b0155ea0-580b-4f4d-b472-0f9583a00dd9",
                             Name = "moder",
                             NormalizedName = "MODER"
                         });
@@ -699,13 +709,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "701",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2faeaf38-3158-4b89-a88a-b163e1f6d1b2",
+                            ConcurrencyStamp = "29f8b7d6-1792-424b-ba82-1709635f88a0",
                             Email = "deeLimpay@mail.ru",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "deeLimpay@mail.ru",
                             NormalizedUserName = "deeLimpay",
-                            PasswordHash = "AQAAAAEAACcQAAAAENiv3KN8CfHfs9roJvpwkM1xF/akb5ydiaU+f9qyiUDVeHqGengNv8jd1RFj1qVxLg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA1Fjapb+rQFuJDQZIzhnjdYJU0h1EzFDmaVUMArs0mYtuAPlxPilLwMz3athe7aNw==",
                             PhoneNumber = "+375433332323",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -716,13 +726,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "702",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "70985885-0a48-46a6-bff5-836dc6e91ea4",
+                            ConcurrencyStamp = "ffd54552-8b98-405a-9fcd-1327e5deeeaf",
                             Email = "stepa@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "stepa@gmail.com",
                             NormalizedUserName = "Stepashka",
-                            PasswordHash = "AQAAAAEAACcQAAAAECou3YiZS8HwU2621REfCUsDJy14+MNZYm4zttzBAYEZiqXLNp7AX6gw4bLjWox+aw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENWjuGM8EGjro3otyv679ILOvELFTPKRwcfA3XWZDDC39svhIHe3Pr6iHhzeDYFfKQ==",
                             PhoneNumber = "+375231884433",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -733,13 +743,13 @@ namespace CarBuy.DAL.Migrations
                         {
                             Id = "703",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a0a7855d-884f-49ab-8ab8-410966364eed",
+                            ConcurrencyStamp = "ea3f669e-de33-4af8-9ad7-ea2973d89d77",
                             Email = "mod@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "mod@gmail.com",
                             NormalizedUserName = "Moder",
-                            PasswordHash = "AQAAAAEAACcQAAAAEE+RTv9C/imFWITFC8s5sa8hohkBlhL3iRkCiqyUVtUznPAPd8b4qHfvZoxhAeFMsw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBwqrp80oYu8OUCdrMc7IP9FHoYQMsb4oSWYMNqX9iMQQdWghXHxST94YY2F2U3eYA==",
                             PhoneNumber = "+375231880433",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",

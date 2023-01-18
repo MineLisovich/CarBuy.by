@@ -40,6 +40,10 @@ namespace CarBuy.DAL.Entities
         public string Customs { get; set; } // Таможня (Растаможен или нет)
         [Required(ErrorMessage = "Укажите сколько владеете авто")]
         public string Ownership { get; set; } // Владение авто (Сколько лет/месяцев/ дней владеет авто)
+        [Required]
+        public string ModelCarAds { get; set; }
+        [Required]
+        public string GenerationModelAds { get; set; }
         // Поля для хранение картинок
         [Required(ErrorMessage = "Загрузите фото авто")]
         public string PhotoCar_1 { get; set; }
@@ -55,6 +59,8 @@ namespace CarBuy.DAL.Entities
         // связи с таблицами
         public BrandCar BrandCar { get; set; } // Марка авто
         public int BrandCarid { get; set; }
+
+      
 
         public BodyCar BodyCar { get; set; }    // Кузов
         public int BodyCarid { get; set; }  

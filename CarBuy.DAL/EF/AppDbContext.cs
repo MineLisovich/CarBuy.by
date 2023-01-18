@@ -356,7 +356,9 @@ namespace CarBuy.DAL.EF
                 UserId = "702",
                 AddDateAds = DateTime.Now,
                 VisibleAds = true,
-                PassedModeration = true
+                PassedModeration = true,
+                ModelCarAds ="rs7",
+                GenerationModelAds = "2023"
             });
             //
             modelBuilder.Entity<FavouritesAds>().HasData(new FavouritesAds { 
